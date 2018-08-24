@@ -1,0 +1,1 @@
+# pronto-static-full
