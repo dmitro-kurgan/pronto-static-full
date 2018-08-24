@@ -1,0 +1,884 @@
+@import 'reset';
+@import 'fonts';
+@import 'header';
+@import 'footer';
+$main_color: #fff;
+$main_color-2: #de0c15;
+$main_color-3: #2f80ed;
+$main_font-size: 24px;
+$main_letter-spacing: 0.10em;
+$main_font-family: BlissPro-Light, Arial, sans-serif;
+$main_font-family-2: Corbel-Regular, Arial, sans-serif;
+$main_font-family-3: Corbel-Bold, Arial, sans-serif;
+$main_font-family-4: Circe-Regular, Arial, sans-serif;
+$main_font-family-5: Circe-Bold, Arial, sans-serif;
+body {
+	min-width: 320px;
+}				
+// -------------------ASSORTMENT-----------------------
+.assortment {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 110px 0 80px 0;
+	h2 {
+		text-align: center;
+		color: #686868;
+		font: 48px $main_font-family-5;
+		margin: 0 0 80px 0;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	ul {
+		li {
+			padding: 0 1px;
+			position: relative;
+			&:hover {
+				.assortment__inner {
+					opacity: 1;
+				}
+			}
+			img {
+				width: 100%;
+				min-height: 310px;
+				overflow: hidden;
+			}
+			.assortment__inner {
+				padding: 44px 23px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 99%;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.60);
+				text-align: center;
+				opacity: 0;
+				cursor: pointer;
+				transition: 0.4s all;
+				@media screen and (max-width: 767px) {
+					padding: 23px;
+				}
+				p {
+					font: 22px $main_font-family;
+					color: $main_color;
+					margin: 0 0 40px 0;
+					letter-spacing: 2px;
+					text-align: left;
+				}
+				button {
+					width: 259px;
+					height: 52px;
+					border-radius: 8px;
+					border: 2px solid $main_color;
+					background: transparent;
+					font: $main_font-size $main_font-family-3;
+					color: $main_color;
+					text-transform: uppercase;
+					letter-spacing: 1.5px;
+					margin: 0 auto;
+				}
+			}
+			&:first-child {
+				img {
+					border-radius: 5px 0 0 0;
+				}	
+			}
+			&:nth-child(3) {
+				img {
+					border-radius: 0 5px 0 0;
+				}	
+			}
+			&:nth-child(4) {
+				img {
+					border-radius: 0 0 0 5px;
+				}	
+			}
+			&:last-child {
+				img {
+					border-radius: 0 0 5px 0;
+				}	
+			}
+		}
+	}
+	.btn-price {
+		width: 359px;
+		height: 70px;
+		background: $main_color-3;
+		border-radius: 8px;
+		text-transform: uppercase;
+		font: 25px $main_font-family-3;
+		color: $main_color;
+		letter-spacing: 1.5px;
+		border: none;
+		outline: none;
+		margin-top: 80px;
+		transition: 0.3s all;
+		@media screen and (max-width: 767px) {
+			width: 290px;
+			font-size: 20px;
+		}
+		&:hover {
+			background: #6FA0E3;
+		}
+		&:active {
+			background: #1C55A1;
+		    box-shadow: inset 0px 4px 15px 0px #000;
+		}
+	}
+}
+// ------------------------------OUR GOODS SELL--------------------------
+.our-goods-sell {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 80px 0 76px 0;
+	@media screen and (max-width: 767px) {
+		padding: 0 0 76px 0;
+	}
+	h2 {
+		font: 40px $main_font-family-5;
+		color: $main_color-3;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	p {
+		font: 22px $main_font-family-2;
+		min-height: 109px;
+		max-width: 597px;
+		color: #686868;
+		margin: 0 auto;
+		margin-top: 22px;
+		text-align: left;
+		@media screen and (max-width: 767px) {
+			margin: 22px 0;
+		}
+	}
+	.slider-wrapper {
+		max-width: 754px;
+		margin: 0 auto;
+		position: relative;
+		.slick-slide {
+			margin: 0px;
+		}
+		img {
+			width: 100%;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.20);
+			z-index: 1;
+		}
+	}
+	.pronto-is {
+		padding: 49px 0 0 0;
+		h3 {
+			font: 40px $main_font-family-5;
+			color: $main_color-3;
+		}
+		.pronto__numbers {
+			margin: 23px 0 0 0;
+			.numbers-list {
+				float: left;
+				width: 25%;
+				// cursor: pointer;
+				cursor: default;
+				@media screen and (max-width: 991px) {
+					width: 100%;
+				}
+				&:hover {
+					.numbers-list__block {
+						border: 3px solid $main_color;
+   						box-shadow: inset 0px 0px 0px 3px #fff;
+   						background: #2F80ED;
+   						color: $main_color;
+   						&:before {
+   							opacity: 1;
+   							height: 65px;
+    						width: 141px;
+    						left: -3px;
+    						top: -3px;
+   						}
+					}
+					p {
+						color: #2F80ED;
+					}
+				}
+				&__block {
+					color: #686868;
+					// font: 33px $main_font-family-5;
+					font: 42px $main_font-family-5;
+					border: 3px solid #686868;
+					border-radius: 33px;
+					max-width: 141px;
+					// height: 53px;
+					height: 65px;
+					margin: 0 auto;
+					position: relative;
+					transition: 0.3s all;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						height: 0;
+						width: 0;
+						border-radius: 33px;
+						opacity: 0;
+						border: 3px solid #2F80ED;
+						background: transparent;
+						transition: 0.3s all;
+					}
+				}
+				p {
+					font: 20px $main_font-family-3;
+					margin: 0 auto;
+					margin-top: 14px;
+					text-align: center;
+					min-height: 129px;
+					transition: 0.3s all;
+					@media screen and (max-width: 991px) {
+						min-height: 85px;
+					}
+				}
+			}
+		}
+		button {
+			width: 359px;
+			height: 70px;
+			background: $main_color-3;
+			border-radius: 8px;
+			text-transform: uppercase;
+			font: 25px $main_font-family-3;
+			color: $main_color;
+			letter-spacing: 1.5px;
+			border: none;
+			outline: none;
+			transition: 0.3s all;
+			@media screen and (max-width: 767px) {
+				width: 290px;
+				font-size: 20px;
+			}
+			&:hover {
+				background: #6FA0E3;
+			}
+			&:active {
+				background: #1C55A1;
+			    box-shadow: inset 0px 4px 15px 0px #000;
+			}
+		}
+	}
+}
+// -----------------------------WHY WORK WITH US-------------------------
+.work-with-us {
+	overflow: hidden;
+	position: relative;
+	padding: 80px 0 120px 0;
+	text-align: center;
+	background: #F3F3F3;
+	@media screen and (max-width: 767px) {
+		padding: 80px 0;
+	}
+	h2 {
+		font: $main_font-size*2 $main_font-family-5;
+		color: $main_color-3;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	&__block {
+		margin: 73px 0 0 0;
+		@media screen and (max-width: 767px) {
+			margin: 30px 0 0 0;
+		}
+		&-box {
+    		margin-top: 50px;
+    		width: 50%;
+    		float: left;
+    		@media screen and (max-width: 767px) {
+    			margin: 0 auto;
+    			margin-top: 35px;
+    			width: 100%;
+    			max-width: 475px;
+    			float: none;
+    		}
+    		&:first-child {
+    			.work-with-us__image {
+			    	margin: 15px auto;
+			    }
+    		}
+			.work-with-us__image {
+				float: left;
+			    min-width: 57px;
+			    min-height: 83px;
+			    margin: 20px auto;
+			    @media screen and (max-width: 767px) {
+			    	float: none;
+			    	min-height: inherit;
+			    }
+			}
+			.work-with-us__text {
+				text-align: left;
+			    padding: 0 0 0 10px;
+			    min-height: 83px;
+			    overflow: hidden;
+			    max-width: 480px;
+		    	@media screen and (max-width: 767px) {
+		    		padding: 0px;
+		    	}
+			    h5 {
+			    	font: $main_font-size $main_font-family-3;
+			    	color: #686868;
+			    	@media screen and (max-width: 767px) {
+			    		text-align: center;
+			    	}
+			    }
+			    p {
+			    	font: 18px $main_font-family-2;
+			    	color: #686868;
+			    	margin: 14px 0 0 0;
+			    }
+			}
+		}
+	}
+	.btn {
+		width: 395px;
+		height: 70px;
+		background: $main_color-3;
+		border-radius: 8px;
+		text-transform: uppercase;
+		font: 25px $main_font-family-3;
+		color: $main_color;
+		letter-spacing: 1.5px;
+		margin-top: 100px;
+		border: none;
+		outline: none;
+		transition: 0.3s all;
+		@media screen and (max-width: 767px) {
+			width: 290px;
+			font-size: 22px;
+			letter-spacing: inherit;
+		}
+		&:hover {
+			background: #6FA0E3;
+		}
+		&:active {
+			background: #1C55A1;
+		    box-shadow: inset 0px 4px 15px 0px #000;
+		}
+	}
+}
+// ------------------------------HOW-TO-DEAL--------------------------
+.how-to-deal {
+	overflow: hidden;
+	position: relative;
+	background: url(../images/deal-background.jpg)no-repeat;
+	background-size: cover;
+	text-align: center;
+	ul {
+		li {
+			.how-to-deal__block {
+				@media screen and (max-width: 767px) {
+					margin: 30px 0 0 0;
+				}
+			}
+		}
+	}
+	&__overlay {
+		background: rgba(0, 0, 0, 0.69);
+	}
+	&__gradient {
+		background: url(../images/rectangle-3.svg)no-repeat;
+		background-size: cover;
+	}
+	h2 {
+		font: 40px $main_font-family-5;
+		color: $main_color;
+		margin: 80px 0 85px 0;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	h6 {
+		margin: 84px 0 72px 0;
+		color: $main_color-3;
+		font: $main_font-size*2 $main_font-family-3;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	&__number {
+		color: $main_color;
+		font: 55px $main_font-family-5;
+		transition: 0.3s all;
+	}
+	&__border {
+		background: $main_color;
+		height: 2px;
+		margin: 30px 0;
+		position: relative;
+		@media screen and (max-width: 767px) {
+			opacity: 0;
+			margin: 0;
+		}
+		.border-hover {
+			position: absolute;
+			z-index: 99;
+			height: 100%;
+			top: 0;
+			right: 0;
+			width: 100%;
+			background: $main_color-3;
+			transition: 0.3s all;
+		}
+	}
+	&__text {
+		min-height: 80px;
+		p {
+			font: $main_font-size $main_font-family-2;
+			color: $main_color;
+			font-weight: normal;
+			transition: 0.3s all;
+		}
+	}
+	ul {
+		li {
+			padding: 0px;
+			cursor: pointer;
+			&:hover {
+				.how-to-deal__number {
+					transform: scale(1.2);
+					color: $main_color-3;
+				}
+				.how-to-deal__text {
+					p {
+						font-family: $main_font-family-3;
+					}
+				}
+			}
+		}
+	}
+}
+// ---------------------------AROUND-THE-WORLD------------------------
+.around-the-world {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 120px 0 0 0;
+	h2 {
+		color: #686868;
+		font: $main_font-size*2 $main_font-family-5;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	&__block {
+		margin: 49px 0 0 0;
+		img {
+			@media screen and (max-width: 1199px) {
+				width: 100%;
+			}
+		}
+	}
+}
+// ------------------------SERTIFICATION----------------------------
+.sertification {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 177px 0 83px 0;
+	h2 {
+		color: #686868;
+		font: $main_font-size*2 $main_font-family-5;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	hr {
+		background: #686868;
+		height: 2px;
+		max-width: 874px;
+		margin-top: 39px;
+		margin-bottom: 39px;
+	}
+	.sertification__block {
+		max-width: 874px;
+		margin: 0 auto;
+		ul {
+			li {
+				@media screen and (max-width: 991px) {
+					&:nth-child(3) {
+						margin-top: 30px;
+					}
+					&:last-child {
+						margin-top: 30px;
+					}
+				}
+				@media screen and (max-width: 767px) {
+					margin-top: 30px;
+					&:first-child {
+						margin-top: 0px;
+					}
+				}
+				text-align: center;
+				img {
+
+				}
+			}
+		}
+	}
+}
+// ----------------PAY-DELIVERY---------------------
+.pay-delivery {
+	overflow: hidden;
+	position: relative;
+	background: url(../images/rectangle-2.svg)no-repeat;
+	padding: 120px 0;
+	background-size: cover;
+	background-position: 100% 100%;
+	ul {
+		li {
+			.pay-delivery__box {
+				max-width: 351px;
+				margin: 0 auto;
+				@media screen and (max-width: 767px) {
+					text-align: center;
+				}
+				.btn {
+					width: 324px;
+					height: 53px;
+					border-radius: 34px;
+					background: $main_color;
+					font: 33px $main_font-family-5;
+					color: #4CAAF3;
+					border: 3px solid $main_color;
+					padding: 0px;
+					position: relative;
+					transition: 0.3s all;
+					@media screen and (max-width: 991px) {
+						width: 100%;
+					}
+					@media screen and (max-width: 767px) {
+						width: 290px;
+					}
+				}
+				.btn-order {
+					padding: 41px 0 0 0;
+					.btn {
+						cursor: auto;
+						&:before {
+						 	content: '';
+							position: absolute;
+							top: -105px;
+							left: 95px;
+							background: url(../images/wallet.png)no-repeat;
+							background-size: contain;
+							width: 143px;
+							height: 93px;
+							transform: scale(0.9);
+							transition: 0.3s all;
+							@media screen and (max-width: 991px) {
+								left: 28%;
+							}
+						}
+						&:after {
+							content: '';
+						    position: absolute;
+						    top: 50%;
+						    left: 50%;
+						    height: 0;
+						    width: 0;
+						    border-radius: 34px;
+						    opacity: 0;
+						    border: 3px solid #fff;
+						    background: transparent;
+						    transition: 0.3s all;
+						}
+						&:hover {
+							border: 3px solid #4CAAF3;
+    						box-shadow: inset 0px 0px 0px 3px #4CAAF3;						
+							&:before {		
+								transform: scale(1);
+							}
+							&:after {
+								height: 53px;
+								width: 324px;
+								opacity: 1;
+								left: -3px;
+								top: -3px;
+								@media screen and (max-width: 991px) {
+									width: 102.5%;
+								}
+								@media screen and (max-width: 767px) {
+									width: 290px;
+								}
+							}
+						}
+					}
+				}
+				.btn-delivery {
+					padding: 41px 0 0 0;
+					@media screen and (max-width: 767px) {
+						padding: 160px 0 0 0;
+					}
+					.btn {
+						cursor: auto;
+						&:before {
+							content: '';
+							position: absolute;
+							top: -90px;
+							left: 93px;
+							background: url(../images/plane.png)no-repeat;
+							background-size: contain;
+							width: 143px;
+							height: 78px;
+							transform: scale(0.9);
+							transition: 0.3s all;
+							@media screen and (max-width: 991px) {
+								left: 28%;
+							}
+						}				
+						&:after {
+							content: '';
+						    position: absolute;
+						    top: 50%;
+						    left: 50%;
+						    height: 0;
+						    width: 0;
+						    border-radius: 34px;
+						    opacity: 0;
+						    border: 3px solid #fff;
+						    background: transparent;
+						    transition: 0.3s all;
+						}
+						&:hover {
+							border: 3px solid #4CAAF3;
+							box-shadow: inset 0px 0px 0px 3px #4CAAF3;						
+							&:before {		
+								transform: scale(1);
+							}
+							&:after {
+								height: 53px;
+								width: 324px;
+								opacity: 1;
+								top: -3px;
+								left: -3px;
+								@media screen and (max-width: 991px) {
+									width: 102.5%;
+								}
+								@media screen and (max-width: 767px) {
+									width: 290px;
+								}
+							}
+						}
+					}
+				}
+				p {
+					font: $main_font-size $main_font-family-2;
+					color: $main_color;
+					margin: 0 auto;
+					text-align: left;
+					margin-top: 42px;
+				}
+			}
+		}
+	}
+	.pay-delivery-button {
+		width: 353px;
+		height: 70px;
+		margin: 0 auto;
+		border-radius: 8px;
+		text-transform: uppercase;
+		border: 3px solid $main_color;
+		background: transparent;
+		display: block;
+		font: 25px $main_font-family-3;
+		color: $main_color;
+		margin-top: 108px;
+		position: relative;
+		transition: 0.3s all;
+		@media screen and (max-width: 767px) {
+			width: 290px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 0;
+			width: 0;
+			border-radius: 8px;
+			opacity: 0;
+			border: 3px solid $main_color;
+			background: transparent;
+			transition: 0.3s all;
+		}
+		&:hover {
+			border: 3px solid #4CAAF3;
+			box-shadow: inset 0px 0px 0px 3px #4CAAF3;
+			background: $main_color;
+			color: #4CAAF3;
+			&:before {
+				opacity: 1;
+				height: 70px;
+				width: 353px;
+				left: -3px;
+				top: -3px;
+				@media screen and (max-width: 767px) {
+					width: 290px;
+				}
+			}
+		}
+	}
+}
+// ----------------------COMMENTS------------------------
+.comments {
+	overflow: hidden;
+	position: relative;
+	padding: 110px 0;
+	text-align: center;
+	h2 {
+		text-align: center;
+		color: #686868;
+		font: 48px $main_font-family-5;
+		margin: 0 0 110px 0;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	.multiple-items-block {
+		.regular-slider__imageblock {
+			width: 149px;
+			height: 149px;
+			margin: 0 auto;
+			img {
+				width: 149px;
+				height: 149px;
+				border-radius: 50%;
+			}
+		}
+		.regular-slider__textblock {
+			min-height: 237px;
+			max-width: 280px;
+			margin: 0 auto;
+			text-align: left;
+			margin-top: 40px;
+			font: 22px $main_font-family-2;
+			color: #686868;
+			h5 {
+				font: 24px $main_font-family-5;
+				text-align: center;
+			}
+			h6 {
+				font: 18px $main_font-family-4, Arial, sans-serif;
+				text-align: center;
+				min-height: 54px;
+			}
+			p {
+				margin: 10px 0 0 0;
+			}
+		}
+	}
+	.btn {
+		width: 395px;
+		height: 70px;
+		background: $main_color-3;
+		border-radius: 8px;
+		text-transform: uppercase;
+		font: 25px $main_font-family-3;
+		color: $main_color;
+		letter-spacing: 1.5px;
+		margin-top: 100px;
+		border: none;
+		outline: none;
+		transition: 0.3s all;
+		@media screen and (max-width: 767px) {
+			width: 290px;
+			font-size: 20px;
+			letter-spacing: inherit;
+			margin-top: 200px;
+		}
+		&:hover {
+			background: #6FA0E3;
+		}
+		&:active {
+			background: #1C55A1;
+		    box-shadow: inset 0px 4px 15px 0px #000;
+		}
+	}
+}
+// ----------------TO-BE-PARTNER------------------
+.to-be-partner {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	padding: 110px 0;
+	background: #F3F3F3;
+	h2 {
+		font: 48px $main_font-family-5;
+		color: $main_color-3;
+		@media screen and (max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+	h4 {
+		font: 56px $main_font-family-5;
+		color: #2F80ED;
+		margin: 80px 0 120px 0;
+		@media screen and (max-width: 767px) {
+			font-size: 46px;
+		}
+	}
+	.flip-counter {
+		max-width: 400px;
+	    text-align: center;
+	    margin: 0 auto;
+	    margin-top: 74px;
+	    .flip-clock-wrapper {
+	    	.flip {
+	    		float: none;
+	    		display: inline-block;
+	    		margin: 0.5px 2.5px;
+	    	}
+	    }
+	}
+	p {
+		font: $main_font-size $main_font-family-3;
+		color: #4F4F4F;
+		line-height: 24px;
+		margin: 10px 0 100px 0;
+	}
+	button {
+		width: 395px;
+		height: 70px;
+		background: $main_color-3;
+		border-radius: 8px;
+		text-transform: uppercase;
+		font: 25px $main_font-family-3;
+		color: $main_color;
+		letter-spacing: 1.5px;
+		border: none;
+		outline: none;
+		transition: 0.3s all;
+		@media screen and (max-width: 767px) {
+			width: 290px;
+		}
+		&:hover {
+			background: #6FA0E3;
+		}
+		&:active {
+			background: #1C55A1;
+		    box-shadow: inset 0px 4px 15px 0px #000;
+		}
+	}
+}

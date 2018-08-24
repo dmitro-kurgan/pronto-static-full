@@ -1,0 +1,165 @@
+@import 'reset';
+@import 'fonts';
+$main_color: #fff;
+$main_color-2: #de0c15;
+$main_color-3: #2f80ed;
+$main_font-size: 24px;
+$main_letter-spacing: 0.10em;
+$main_font-family: BlissPro-Light, Arial, sans-serif;
+$main_font-family-2: Corbel-Regular, Arial, sans-serif;
+$main_font-family-3: Corbel-Bold, Arial, sans-serif;
+$main_font-family-4: Circe-Regular, Arial, sans-serif;
+$main_font-family-5: Circe-Bold, Arial, sans-serif;
+body {
+	min-width: 320px;
+}
+// -----------------FOOTER------------------
+footer {
+	overflow: hidden;
+	position: relative;
+	.footer {
+		background: #31363D;
+		&__map {
+			.our_location {
+				height: 298px;
+				max-width: 1010px;
+				margin: 0 auto;
+				margin-top: 42px;
+				position: relative;
+				.footer__map-overlay {
+					height: 100%;
+					width: 100%;
+					background: url(../images/rectangle-4.svg)no-repeat;
+					#map {
+						height: 100%;
+						width: 100%;
+					}			
+				}
+			}
+		}
+		&__content {
+			max-width: 850px;
+			margin: 0 auto;
+			margin-top: 77px;
+			margin-bottom: 50px;
+			font: 18px $main_font-family-2;
+			color: $main_color;
+			&-logo {
+				background: url(../images/footer-logo.png)no-repeat;
+				width: 116px;
+				height: 95px;
+				float: right;
+				margin: 0 50px 0 0;
+				@media screen and (max-width: 767px) {
+					float: none;
+					margin: 0 auto;
+				}
+			}
+			&-adress {
+				@media screen and(max-width: 767px) {
+					margin: 30px 0 0 0;
+				}
+				li {
+					line-height: 30px;
+					@media screen and (max-width: 767px) {
+						text-align: center;
+					}
+					a {
+						font: 18px $main_font-family-2;
+						color: $main_color;
+						&:last-child {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			&-telephones {
+				@media screen and(max-width: 767px) {
+					margin: 30px 0 0 0;
+					text-align: center;
+				}
+				li {
+					line-height: 30px;	
+					@media screen and (max-width: 767px) {
+						line-height: 30px;
+					    width: 130px;
+					    margin: 0 auto;
+					    text-align: left;
+					}		
+					a {
+						font: 16px $main_font-family-4;
+						color: $main_color;
+						letter-spacing: 1.5px;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+				.viber {
+					font: 18px $main_font-family-2;
+					color: rgba(255, 255, 255, 0.80);
+					position: relative;
+					padding: 0 0 0 30px;
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						background: url(../images/viber.png)no-repeat;
+						background-size: contain;
+						width: 20px;
+						height: 22px;
+					}
+				}
+				.whatsapp {	
+					font: 18px $main_font-family-2;
+					color: rgba(255, 255, 255, 0.80);
+					position: relative;
+					padding: 0 0 0 30px;
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						background: url(../images/whatsapp.png)no-repeat;
+						background-size: contain;
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+.footer__bottom {
+	background: #262A30;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	.copyright {
+		padding: 10px 0;
+		p {
+			display: inline-block;
+			font: 16px $main_font-family-2;
+			color: $main_color;
+			line-height: 45px;
+			@media screen and (max-width: 767px) {
+				padding: 0 28px;
+			}
+			a {
+				padding: 0 50px 0 0;
+    			position: relative;
+    			color: inherit;
+    			text-decoration: none;
+			}
+			a:after {
+				content: '';
+				position: absolute;
+				background: url(../images/mms.png)no-repeat;
+				width: 40px;
+				height: 41px;
+				right: 0;
+			}
+		}
+	}
+}
